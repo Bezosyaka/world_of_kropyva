@@ -20,7 +20,7 @@ class Text():
 		print("") #нова строка
 
 	@log.log_on_error
-	def local(self, dop, tolocal): #tolocal - строка яку будемо локалізувати (писати треба наприклад як "dialog1/textzalupovicha1")
+	def local(self, dop, tolocal): #dop - це конкретний файл локи (наприклад dialogues.xml) tolocal - строка яку будемо локалізувати (писати треба наприклад як "dialog1/textzalupovicha1")
 		tree = ET.parse(self.loc+dop)
 		x = tree.find(tolocal)
 		return x.text
